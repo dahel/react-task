@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders properly for given placeholder 1`] = `
+exports[`InputBase component renders properly for given placeholder 1`] = `
 <div
   className="sc-bdvvtL dIIVTQ"
 >
@@ -25,7 +25,7 @@ exports[`renders properly for given placeholder 1`] = `
 </div>
 `;
 
-exports[`renders properly for given type 1`] = `
+exports[`InputBase component renders properly for given type 1`] = `
 <div
   className="sc-bdvvtL dIIVTQ"
 >
@@ -50,7 +50,7 @@ exports[`renders properly for given type 1`] = `
 </div>
 `;
 
-exports[`renders properly for only-required props passed 1`] = `
+exports[`InputBase component renders properly for only-required props passed 1`] = `
 <div
   className="sc-bdvvtL dIIVTQ"
 >
@@ -75,7 +75,7 @@ exports[`renders properly for only-required props passed 1`] = `
 </div>
 `;
 
-exports[`renders properly in case 'disabled' prop is passed 1`] = `
+exports[`InputBase component renders properly in case 'disabled' prop is passed 1`] = `
 <div
   className="sc-bdvvtL dIIVTQ"
 >
@@ -100,7 +100,7 @@ exports[`renders properly in case 'disabled' prop is passed 1`] = `
 </div>
 `;
 
-exports[`renders properly in case 'disabled' prop is passed 2`] = `
+exports[`InputBase component renders properly in case 'disabled' prop is passed 2`] = `
 <div
   className="sc-bdvvtL dIIVTQ"
 >
@@ -125,7 +125,7 @@ exports[`renders properly in case 'disabled' prop is passed 2`] = `
 </div>
 `;
 
-exports[`renders properly in case 'valid' prop is false and 'validationError' is not defined 1`] = `
+exports[`InputBase component renders properly in case 'valid' prop is false and 'validationError' is not defined 1`] = `
 <div
   className="sc-bdvvtL dIIVTQ"
 >
@@ -155,7 +155,7 @@ exports[`renders properly in case 'valid' prop is false and 'validationError' is
 </div>
 `;
 
-exports[`renders properly in case 'valid' prop is false and 'validationError' prop is defined 1`] = `
+exports[`InputBase component renders properly in case 'valid' prop is false and 'validationError' prop is defined 1`] = `
 <div
   className="sc-bdvvtL dIIVTQ"
 >

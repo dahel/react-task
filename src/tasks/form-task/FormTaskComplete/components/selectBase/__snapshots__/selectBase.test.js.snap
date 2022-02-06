@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders properly for only-required props passed 1`] = `
+exports[`SelectBase component renders properly for only-required props passed 1`] = `
 <div
   className="sc-bdvvtL cTwBbG"
 >

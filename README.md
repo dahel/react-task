@@ -1,3 +1,8 @@
+# Recruitment Task Solution Comments
+
+# Project was build with nodejs version **v16.13.2** and npm version **8.1.2**
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 The app contains task inside of it, so all details would be on the home page after starting the app by script below.
