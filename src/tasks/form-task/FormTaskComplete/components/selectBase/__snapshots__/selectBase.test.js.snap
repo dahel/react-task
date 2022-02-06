@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders properly for only-required props passed 1`] = `
+<div
+  className="sc-bdvvtL cTwBbG"
+>
+  <label
+    className="sc-gsDKAQ cSZgOM"
+    htmlFor="name"
+  >
+    label
+  </label>
+  <select
+    className="sc-dkPtRN gjymBZ"
+    id="name"
+    name="name"
+    onChange={[Function]}
+    value="value"
+  >
+    <option
+      value="option1"
+    >
+      label1
+    </option>
+    <option
+      value="option2"
+    >
+      label2
+    </option>
+  </select>
+</div>
+`;

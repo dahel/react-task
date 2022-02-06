@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders properly for given placeholder 1`] = `
+<div
+  className="sc-bdvvtL dIIVTQ"
+>
+  <label
+    className="sc-gsDKAQ cSZgOM"
+    htmlFor="name"
+  >
+    label
+     
+  </label>
+  <input
+    className="sc-dkPtRN fVDXDy"
+    disabled={false}
+    id="name"
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="placeholder"
+    type="text"
+    value="value"
+  />
+</div>
+`;
+
+exports[`renders properly for given type 1`] = `
+<div
+  className="sc-bdvvtL dIIVTQ"
+>
+  <label
+    className="sc-gsDKAQ cSZgOM"
+    htmlFor="name"
+  >
+    label
+     
+  </label>
+  <input
+    className="sc-dkPtRN fVDXDy"
+    disabled={false}
+    id="name"
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder=""
+    type="number"
+    value="value"
+  />
+</div>
+`;
+
+exports[`renders properly for only-required props passed 1`] = `
+<div
+  className="sc-bdvvtL dIIVTQ"
+>
+  <label
+    className="sc-gsDKAQ cSZgOM"
+    htmlFor="name"
+  >
+    label
+     
+  </label>
+  <input
+    className="sc-dkPtRN fVDXDy"
+    disabled={false}
+    id="name"
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder=""
+    type="text"
+    value="value"
+  />
+</div>
+`;
+
+exports[`renders properly in case 'disabled' prop is passed 1`] = `
+<div
+  className="sc-bdvvtL dIIVTQ"
+>
+  <label
+    className="sc-gsDKAQ cSZgOM"
+    htmlFor="name"
+  >
+    label
+     
+  </label>
+  <input
+    className="sc-dkPtRN fVDXDy"
+    disabled={true}
+    id="name"
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder=""
+    type="text"
+    value="value"
+  />
+</div>
+`;
+
+exports[`renders properly in case 'disabled' prop is passed 2`] = `
+<div
+  className="sc-bdvvtL dIIVTQ"
+>
+  <label
+    className="sc-gsDKAQ cSZgOM"
+    htmlFor="name"
+  >
+    label
+     
+  </label>
+  <input
+    className="sc-dkPtRN fVDXDy"
+    disabled={true}
+    id="name"
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder=""
+    type="text"
+    value="value"
+  />
+</div>
+`;
+
+exports[`renders properly in case 'valid' prop is false and 'validationError' is not defined 1`] = `
+<div
+  className="sc-bdvvtL dIIVTQ"
+>
+  <label
+    className="sc-gsDKAQ cSZgOM"
+    htmlFor="name"
+  >
+    label
+     
+  </label>
+  <input
+    className="sc-dkPtRN fFQvcc"
+    disabled={false}
+    id="name"
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder=""
+    type="text"
+    value="value"
+  />
+  <span
+    className="sc-eCImPb bZaMKe"
+  >
+    
+  </span>
+</div>
+`;
+
+exports[`renders properly in case 'valid' prop is false and 'validationError' prop is defined 1`] = `
+<div
+  className="sc-bdvvtL dIIVTQ"
+>
+  <label
+    className="sc-gsDKAQ cSZgOM"
+    htmlFor="name"
+  >
+    label
+     
+  </label>
+  <input
+    className="sc-dkPtRN fFQvcc"
+    disabled={false}
+    id="name"
+    name="name"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder=""
+    type="text"
+    value="value"
+  />
+  <span
+    className="sc-eCImPb bZaMKe"
+  >
+    bad value
+  </span>
+</div>
+`;

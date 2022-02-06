@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component renders properly for only-required props passed 1`] = `
+<div
+  className="sc-bdvvtL cZVHgs"
+>
+  <h3
+    className="sc-gsDKAQ iQGclo"
+  >
+    title
+  </h3>
+</div>
+`;
+
+exports[`Card component renders properly in case 'pending' is true 1`] = `
+<div
+  className="sc-bdvvtL grriIm"
+>
+  <h3
+    className="sc-gsDKAQ iQGclo"
+  >
+    title
+  </h3>
+</div>
+`;
+
+exports[`Card component renders properly in case children components are defined 1`] = `
+<div
+  className="sc-bdvvtL cZVHgs"
+>
+  <h3
+    className="sc-gsDKAQ iQGclo"
+  >
+    title
+  </h3>
+  <div>
+    this is div
+  </div>
+</div>
+`;
