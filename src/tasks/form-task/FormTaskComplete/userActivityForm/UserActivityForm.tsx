@@ -1,7 +1,7 @@
 import { SyntheticEvent } from 'react';
 import styled from 'styled-components';
 import Card from '../components/card/Card';
-import useForm, { IFormValues, Form } from '../hooks/useForm/useForm';
+import useForm, { IFormValues, Form, IFormConfig } from '../hooks/useForm/useForm';
 import formFields from './formFields';
 
 const Wrapper = styled.div`
@@ -40,12 +40,18 @@ const SaveButton = styled.button`
 `;
 
 interface IProps {
-  submit: (values: IFormValues) => void;
+  submit: (values: IFormValues, reset: () => void) => void;
   pending: boolean;
 }
 
 const UserActivityForm = ({ submit, pending }: IProps) => {
-  const [form, getValues, validateForm]: [Form, () => IFormValues, () => boolean] = useForm(formFields);
+  const [form, getValues, validateForm, reset]: [
+    Form,
+    () => IFormValues,
+    () => boolean,
+    (formConfig: IFormConfig) => void,
+  ] = useForm(formFields);
+  const resetForm = (): void => reset(formFields);
 
   return (
     <Wrapper>
@@ -54,7 +60,7 @@ const UserActivityForm = ({ submit, pending }: IProps) => {
         onSubmit={(event: SyntheticEvent) => {
           event.preventDefault();
 
-          validateForm() && submit(getValues());
+          validateForm() && submit(getValues(), resetForm);
         }}>
         <Card title="Personal Info" pending={pending}>
           <Row>

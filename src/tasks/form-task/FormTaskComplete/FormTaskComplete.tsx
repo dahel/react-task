@@ -17,12 +17,14 @@ export const FormTaskComplete = () => {
     <Wrapper>
       <UserActivityForm
         pending={pending}
-        submit={async (values: IFormValues) => {
+        submit={async (values: IFormValues, reset: () => void) => {
           console.log(values);
 
           setPending(true);
 
           await saveUserForm();
+
+          reset();
 
           setPending(false);
         }}

@@ -4,7 +4,12 @@ import SelectBase from '../components/selectBase/SelectBase';
 import type { IValidator, IFormItemConfig, IFormConfig } from '../hooks/useForm/useForm';
 import { validateDateStringFormat, validateDateString, isDateInThePast } from '../utils/validators/validators';
 
-const inputDateFormat = 'YYYY-MM-DD';
+enum UserType {
+  ACTIVE = 'active',
+  INACTIVE = 'inactive',
+}
+
+const inputDateFormat: string = 'YYYY-MM-DD';
 
 const dateValidators: IValidator[] = [
   {
@@ -80,15 +85,15 @@ const birthday: IFormItemConfig = {
 const userType: IFormItemConfig = {
   name: 'userType',
   label: 'User Type',
-  value: 'active',
+  value: UserType.ACTIVE,
   render: renderSelect,
   options: [
     {
-      value: 'active',
+      value: UserType.ACTIVE,
       label: 'Active',
     },
     {
-      value: 'inactive',
+      value: UserType.INACTIVE,
       label: 'Inactive',
     },
   ],
@@ -97,10 +102,11 @@ const userType: IFormItemConfig = {
       ...formConfig,
       userInactivityDate: {
         ...formConfig.userInactivityDate,
-        disabled: value === 'active',
+        disabled: value === UserType.ACTIVE,
         valid: true,
         validationError: '',
-        required: value === 'inactive',
+        required: value === UserType.INACTIVE,
+        value: '',
       },
     };
   },

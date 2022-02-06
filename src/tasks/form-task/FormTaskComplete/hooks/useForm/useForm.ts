@@ -1,4 +1,4 @@
-import { useState, useCallback, SyntheticEvent, ReactNode } from 'react';
+import { useState, SyntheticEvent, ReactNode } from 'react';
 import type { ISelectBaseOptions } from '../../components/selectBase/SelectBase';
 
 export interface IValidator {
@@ -69,9 +69,10 @@ const validate = (value: string, formConfigField: IFormItemConfig): IValidationR
   return getValidationResult(true);
 };
 
-export default function useForm(formFields: IFormConfig): [Form, () => IFormValues, () => boolean] {
+export default function useForm(
+  formFields: IFormConfig,
+): [Form, () => IFormValues, () => boolean, (formConfig: any) => void] {
   const [formConfig, setFormConfig] = useState(formFields);
-
   const handleInputEvent = (event: SyntheticEvent): void => {
     const { name, value } = event.target as HTMLInputElement | HTMLSelectElement;
     const update: UpdateFormItemMethod = formConfig[name].update || ((formConfig: IFormConfig) => formConfig);
@@ -107,20 +108,18 @@ export default function useForm(formFields: IFormConfig): [Form, () => IFormValu
     };
   }, {} as Form);
 
-  const getValues: () => IFormValues = useCallback(
-    () =>
-      Object.values(formConfig).reduce(
-        (result: IFormValues, next: IFormItemConfig) =>
-          ({
-            ...result,
-            ...(next.value.trim() ? { [next.name]: next.value.trim() } : null),
-          } as IFormValues),
-        {} as IFormValues,
-      ),
-    [formConfig],
-  );
+  const getValues = (): IFormValues => {
+    return Object.values(formConfig).reduce(
+      (result: IFormValues, next: IFormItemConfig) =>
+        ({
+          ...result,
+          ...(next.value.trim() ? { [next.name]: next.value.trim() } : null),
+        } as IFormValues),
+      {} as IFormValues,
+    );
+  };
 
-  const validateForm: () => boolean = useCallback(() => {
+  const validateForm = (): boolean => {
     const { updatedFormConfig, isFormValid }: { updatedFormConfig: IFormConfig; isFormValid: boolean } = Object.keys(
       formConfig,
     ).reduce(
@@ -149,7 +148,9 @@ export default function useForm(formFields: IFormConfig): [Form, () => IFormValu
     setFormConfig(updatedFormConfig);
 
     return isFormValid;
-  }, [formConfig]);
+  };
 
-  return [form, getValues, validateForm];
+  const reset = (formConfig: any) => setFormConfig(formConfig);
+
+  return [form, getValues, validateForm, reset];
 }
