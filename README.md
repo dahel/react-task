@@ -1,3 +1,8 @@
+## Rozwiązanie zadania jest na branczce 'solution'
+
+___
+___
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 The app contains task inside of it, so all details would be on the home page after starting the app by script below.
